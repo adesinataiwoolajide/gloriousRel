@@ -28,7 +28,6 @@
                             
                         </div>
                     
-                       
                     </div>
                 </div>
                 <div class="row">
@@ -57,8 +56,7 @@
                                                 <th >Email</th>
                                                 <th >Customer Name</th>
                                                 <th >Customer ID</th>
-                                                <th>Action </th>
-                                                   
+                                                
                                             </tr>
                                         </thead>
                                     
@@ -68,17 +66,19 @@
                                             foreach($statement->getAllTransAccount() as $accounts){ 
                                                 ?>
                                                 <tr class="gradeX">
-                                                    <td><?php echo $y; ?></td>
+                                                    <td><?php echo $y; ?>
+                                                        <a href="account_transactions.php?account_number=<?php echo $accounts['account'] ?>" class="btn btn-primary">
+                                                            <i class="fa fa-table"></i> View
+                                                        </a>
+                                                        <a href="transaction_details.php?account_number=<?php echo $accounts['account'] ?>&&transaction_id=<?php echo $accounts['id'] ?>"
+                                                            class="btn btn-danger">
+                                                        <i class="fa fa-list"></i> Details</a>
+                                                    </td>
                                                     <td><?php echo $accounts['account'] ?></td>
                                                     <td><?php echo $accounts['email'] ?></td>
                                                     <td><?php echo $accounts['customer_name'] ?></td>
                                                     <td><?php echo $accounts['customerid'] ?></td>
-                                                    <td>
-                                                        <a href="account_transactions.php?account_number=<?php echo $accounts['account'] ?>" class="btn btn-success">
-                                                            <i class="fa fa-list"></i> View
-                                                        </a>
-                                                    </td>
-                                                
+                                                    
                                                 </tr><?php 
                                                 $y++; 
                                             } ?>
@@ -92,8 +92,7 @@
                                                 <th >Email</th>
                                                 <th >Customer Name</th>
                                                 <th >Customer ID</th>
-                                                <th>Action </th>
-                                                   
+                                                  
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -112,7 +111,7 @@
 
             
             <footer class="dt-footer">
-                Copyright Jethro Systems © <?php echo date("Y"); ?>
+                Copyright Packine Systems © <?php echo date("Y"); ?>
             </footer>
 
         </div>

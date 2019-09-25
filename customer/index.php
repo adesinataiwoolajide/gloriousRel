@@ -1,4 +1,6 @@
-<?php include_once("../administrator/header.php"); include_once("details.php"); ?>
+<?php 
+include_once("header.php"); 
+include_once("details.php"); ?>
  
 <main class="dt-main">
 	<?php include_once("sidebar.php"); ?>
@@ -267,4 +269,4 @@
 <!-- /root -->
 
 <!-- Optional JavaScript -->
-<?php include_once("../administrator/footer.php") ?>
+<?php include_once("footer.php") ?>

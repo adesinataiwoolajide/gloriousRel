@@ -6,9 +6,13 @@ $registration = new Customer;
 $general = new General;
 $statement = new Statement;
 if(!isset($_SESSION['id'])){ ?> 
-	<script> window.location=(".././")</script><?php 
+<script> window.location=(".././")</script><?php 
 
 }
+
+//$username = $_SESSION['username'];
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +28,7 @@ if(!isset($_SESSION['id'])){ ?>
 <title>STATEMENT PAL</title>
 
 	<!-- Site favicon -->
-	<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="assets/images/log.jpg" type="image/x-icon">
 	<link rel="stylesheet" href="node_modules/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="vendors/gaxon-icon/styles.css">
     <link rel="stylesheet" href="node_modules/perfect-scrollbar/css/perfect-scrollbar.css">

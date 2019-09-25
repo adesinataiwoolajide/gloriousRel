@@ -54,7 +54,7 @@
         public function getAllTransAccount()
 		{
 			$db = Database::getInstance()->getConnection();
-			$query = $db->prepare("SELECT DISTINCT account,email,customer_name, customerid FROM statement ORDER BY account ASC");
+			$query = $db->prepare("SELECT DISTINCT account,email,customer_name, customerid,id FROM statement ORDER BY account ASC");
 			$query->execute();
 			return $query->fetchAll(PDO::FETCH_ASSOC);
         }
@@ -138,6 +138,25 @@
             $query->bindValue(":account_number", $account_number);
 			$query->execute();
 			return $query->fetch();
+		}
+		
+		public function getTransactionId($id)
+		{
+			$db = Database::getInstance()->getConnection();
+            $query = $db->prepare("SELECT * FROM statement WHERE id=:id");
+            $query->bindValue(":id", $id);
+			$query->execute();
+			return $query->fetch();
+		}
+		
+		public function getTransactionList($id)
+		{
+			$db = Database::getInstance()->getConnection();
+            $query = $db->prepare("SELECT * FROM statement WHERE id=:id");
+            $query->bindValue(":id", $id);
+           // $query->bindValue(":number", $number);
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 		
 		public function getCountAccount($customerid)

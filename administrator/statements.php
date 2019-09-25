@@ -93,7 +93,7 @@
             </div>
                 
             <footer class="dt-footer">
-                Copyright Jethro Systems © <?php echo date("Y"); ?>
+                Copyright Packine Systems © <?php echo date("Y"); ?>
             </footer>
 
                 </div>

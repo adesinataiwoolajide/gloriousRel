@@ -79,12 +79,17 @@
                                                     $starting_date = $bdat[1];
                                                     $ending_date = $vdat[1]; ?>
                                                     <tr class="gradeX">
-                                                        <td><?php echo $y ?></td>
+                                                        <td><?php echo $y ?>
+                                                            <a href="transaction_details.php?account_number=<?php echo $account_number ?>&&transaction_id=<?php echo $accounts['id'] ?>"
+                                                                    class="btn btn-success">
+                                                                <i class="fa fa-list"></i>
+                                                            </a>
+                                                        </td>
                                                         <td><?php echo $account_number ?></td>
                                                         
                                                         <td><?php  echo $ending_date; ?></td>
                                                         <td><?php echo $starting_date; ?></td>
-                                                        <td><?php ; 
+                                                        <td><?php 
                                                             $amo = explode(":", $amount);
                                                             echo $amo[1]; ?>
                                                         </td>
@@ -148,7 +153,7 @@
             </div>
         
             <footer class="dt-footer">
-                Copyright Jethro Systems © <?php echo date("Y"); ?>
+                Copyright Packine Systems © <?php echo date("Y"); ?>
             </footer>
 
         </div>
